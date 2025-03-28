@@ -31,7 +31,7 @@ class Block {
         return this.isEditing ? `
             <div class="block-actions">
                 <button class="remove-block-btn" data-block-index="${index}">
-                    <img src="../source/img/delete-icon.svg" alt="Удалить блок" class="button-icon" contenteditable="${this.isEditing}">
+                    <img src="./source/img/delete-icon.svg" alt="Удалить блок" class="button-icon" contenteditable="${this.isEditing}">
                 </button>
             </div>
         ` : '';
@@ -42,7 +42,7 @@ class Block {
             return `
             <div class="subblock-actions">
                 <button class="remove-subblock-btn" data-block-index="${blockIndex}" data-sub-index="${subIndex}" contenteditable="${this.isEditing}">
-                    <img src="../source/img/delete-icon.svg" alt="Удалить подблок" class="button-icon">
+                    <img src="./source/img/delete-icon.svg" alt="Удалить подблок" class="button-icon">
                 </button>
             </div>
             `;
@@ -64,7 +64,7 @@ class Block {
     renderAddSubblockButton() {
         return `
             <button class="add-subblock-btn">
-                <img src="../source/img/add-icon.svg" alt="Добавить подблок" class="button-icon" contenteditable="${this.isEditing}">
+                <img src="./source/img/add-icon.svg" alt="Добавить подблок" class="button-icon" contenteditable="${this.isEditing}">
             </button>
         `;
     }
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Сохранение изменений
     const saveButton = document.createElement('button');
-    saveButton.innerHTML = '<img src="../source/img/save-icon1.svg" id = "save-icon" class="button-icon">';
+    saveButton.innerHTML = '<img src="./source/img/save-icon1.svg" id = "save-icon" class="button-icon">';
     saveButton.classList.add('saveButton');
     controlsContainer.append(saveButton);
 
@@ -468,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
         buildPage(blocks);
 
         // Обновляем иконку кнопки редактирования
-        editToggle.innerHTML = '<img src="../source/img/edit-false.svg" class="button-icon">';
+        editToggle.innerHTML = '<img src="./source/img/edit-false.svg" class="button-icon">';
 
         console.log('After saving:', JSON.parse(localStorage.getItem('blocks')));
         // buildPage(blocks);
@@ -481,7 +481,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Режим редактирования
     const editToggle = document.createElement('button');
-    editToggle.innerHTML  = '<img src="../source/img/edit-false.svg" class="button-icon">';
+    editToggle.innerHTML  = '<img src="./source/img/edit-false.svg" class="button-icon">';
     editToggle.classList.add('editToggle')
     controlsContainer.append(editToggle);
 
@@ -496,16 +496,16 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (isCurrentlyEditing) {
             addTextBlockButton.classList.add('visible');
-            editToggle.innerHTML = '<img src="../source/img/edit-true.svg" class="button-icon">';
+            editToggle.innerHTML = '<img src="./source/img/edit-true.svg" class="button-icon">';
         } else {
             addTextBlockButton.classList.remove('visible');
-            editToggle.innerHTML = '<img src="../source/img/edit-false.svg" class="button-icon">';
+            editToggle.innerHTML = '<img src="./source/img/edit-false.svg" class="button-icon">';
         }
     });
 
     // Добавление нового текстового блока
     const addTextBlockButton = document.createElement('button');
-    addTextBlockButton.innerHTML = '<img src="../source/img/add-icon.svg" class="button-icon">';
+    addTextBlockButton.innerHTML = '<img src="./source/img/add-icon.svg" class="button-icon">';
     addTextBlockButton.classList.add('addTextBlockButton');
     controlsContainer.append(addTextBlockButton);
 
