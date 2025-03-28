@@ -1,0 +1,72 @@
+/* Общий сброс стилей */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Упрощает работу с отступами и размерами */
+}
+
+/* Убираем стандартные отступы и списки */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Убираем стандартные стили списков */
+ul, ol {
+    list-style: none;
+}
+
+/* Убираем стандартные стили ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Убираем стандартные стили кнопок и полей ввода */
+button, input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Убираем стандартные стили изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Убираем стандартные стили таблиц */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Убираем стандартные стили форм */
+fieldset {
+    border: none;
+}
+
+/* Убираем стандартные стили для интерактивных элементов */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Убираем стандартные стили для текстовых полей */
+textarea {
+    resize: vertical; /* Разрешаем только вертикальное изменение размера */
+}
+
+/* Убираем стандартные стили для выделения текста */
+::selection {
+    background-color: #b3d4fc; /* Цвет выделения */
+    color: #000; /* Цвет текста */
+}

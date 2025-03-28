@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./source/css/index.css">
+        <script src="./script/block.js" defer></script>
+        <script src="./script/main.js" defer></script>
+        <title>5lab</title>
+    </head>
+    <body>
+        <nav class="api-nav">
+            <button class="api-nav button" api="ageByName">ageByName</button>
+            <button class="api-nav button" api="JSONPlaceholder">JSONPlaceholder</button>
+            <button class="api-nav button" api="cats">cats</button>
+        </nav>
+
+        <div id="api-ageByName" class="api-container" style="display: none;"></div>
+        <div id="api-JSONPlaceholder" class="api-container" style="display: none;"></div>
+        <div id="api-cats" class="api-container" style="display: none;"></div>
+
+        <div id="blocks-container"></div>
+
+        <script src="./script/api/apiAgeByName.js" type="module"></script>
+        <script src="./script/api/apiJSONPlaceholder.js" type="module"></script>
+        <script src="./script/api/apiCats.js" type="module"></script>
+    </body>
+</html>
