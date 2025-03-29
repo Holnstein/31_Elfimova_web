@@ -13,7 +13,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.api-nav button').forEach(btn => {
         btn.addEventListener('click', () => {
-            const apiName = btn.getAttribute('api');
+            const apiName = btn.getAttribute('data-api');
             console.log(apiName);
 
             document.querySelectorAll('.api-container').forEach(cont => {
