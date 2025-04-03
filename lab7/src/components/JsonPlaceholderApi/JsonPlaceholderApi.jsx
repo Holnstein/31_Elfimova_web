@@ -206,6 +206,7 @@ const JsonPlaceholder = () => {
                 <button className="hover:bg-blue-500" onClick={fetchPosts}>Get All Posts</button>
                 <input
                     type="number"
+                    name="PostID"
                     placeholder="Post ID"
                     value={currentPost.id}
                     onChange={(e) => setCurrentPost(prev => ({

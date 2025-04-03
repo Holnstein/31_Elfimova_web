@@ -54,6 +54,7 @@ const Cats = () => {
                 <input
                     type="text"
                     value={statusCode}
+                    id="kittie"
                     onChange={(e) => setStatusCode(e.target.value)}
                     placeholder="Введи код статуса"
                     onKeyPress={(e) => e.key === 'Enter' && handleGetCat()}

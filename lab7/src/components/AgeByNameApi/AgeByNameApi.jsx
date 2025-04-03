@@ -43,6 +43,7 @@ const AgeByNameApi = () => {
 
             <div className="input-cont">
                 <input
+                    id="ageInput"
                     type="text"
                     value={name}
                     onChange={handleNameChange}
@@ -56,11 +57,11 @@ const AgeByNameApi = () => {
                 {loading && <div className="loading">Your age is...</div>}
                 {error && <div className="error">{error}</div>}
                 {ageData && !loading && (
-                    <>
-                        <p>Name: {ageData.name}</p>
-                        <p>Age: {ageData.age ?? 'unknown'}</p>
-                        <p>Count: {ageData.count}</p>
-                    </>
+                    <div className="bg-white rounded-2xl p-3">
+                        <p className="text-amber-500">Name: {ageData.name}</p>
+                        <p className="text-blue-800">Age: {ageData.age ?? 'unknown'}</p>
+                        <p className="text-rose-600">Count: {ageData.count}</p>
+                    </div>
                 )}
             </div>
         </div>
