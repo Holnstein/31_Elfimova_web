@@ -1,0 +1,132 @@
+/*@import "./styles/reset.css";*/
+@import "tailwindcss";
+
+@layer components {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #afc9b6;
+        padding: 20px;
+    }
+
+    .api-container {
+        background-color: rgba(213, 91, 218, 0.541);
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgb(228 24 24 / 40%);
+        padding: 20px;
+    }
+
+    .api-container h1 {
+        color: hsl(81, 78%, 62%);
+        margin-top: 0;
+        border-bottom: 2px solid #d80d0d;
+        padding-bottom: 10px;
+        /*font-size: 20px;*/
+    }
+
+    button {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        flex-grow: 1;
+    }
+
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    /* Формы ввода */
+    .input-cont, .input-status-code, .api-controls {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+        align-items: center;
+    }
+}
+
+
+@layer base {
+    /* Общий сброс стилей */
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Упрощает работу с отступами и размерами */
+    }
+
+    /* Убираем стандартные отступы и списки */
+    body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Убираем стандартные стили списков */
+    ul, ol {
+        list-style: none;
+    }
+
+    /* Убираем стандартные стили ссылок */
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Убираем стандартные стили кнопок и полей ввода */
+    button, input, textarea, select {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    /* Убираем стандартные стили изображений */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Убираем стандартные стили таблиц */
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    /* Убираем стандартные стили форм */
+    fieldset {
+        border: none;
+    }
+
+    /* Убираем стандартные стили для интерактивных элементов */
+    button, input[type="button"], input[type="reset"], input[type="submit"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    /* Убираем стандартные стили для текстовых полей */
+    textarea {
+        resize: vertical; /* Разрешаем только вертикальное изменение размера */
+    }
+
+    /* Убираем стандартные стили для выделения текста */
+    ::selection {
+        background-color: #b3d4fc; /* Цвет выделения */
+        color: #000; /* Цвет текста */
+    }
+}
