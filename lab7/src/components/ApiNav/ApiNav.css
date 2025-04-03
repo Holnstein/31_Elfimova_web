@@ -1,0 +1,19 @@
+.api-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+.api-nav button {
+    color: white;
+    background-color: #4a6fa5;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.api-nav button:hover {
+    background-color: #3a5a80;
+    transform: translateY(-2px);
+}
